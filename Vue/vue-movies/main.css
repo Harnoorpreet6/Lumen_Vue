@@ -1,0 +1,72 @@
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+}
+
+/* App container */
+#app {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #ffdd59;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Director sections */
+.director {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-left: 5px solid #ffd700;
+  background-color: #1c2833;
+  border-radius: 8px;
+}
+
+.director h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: #ffd700;
+}
+
+.director button {
+  margin-left: 15px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.director button:hover {
+  background-color: #e05550;
+}
+
+/* Movie list under each director */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.movie {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #2a3b4c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.
+}
