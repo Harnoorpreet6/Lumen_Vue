@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎬 Movie Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="app">
+    <h1>🎬 Movie Directory</h1>
+
+    <p v-if="loading">Loading...</p>
+    <p v-if="error">{{ error }}</p>
+
+    <!-- Directors and Movies -->
+    <div v-for="director in directors" :key="director.id" class="director">
+      <h2>{{ director.name }}</h2>
+      <button @click="toggleDirector(director.id)">
+        {{ director.showMovies ? 'Hide Movies' : 'Show Movies' }}
+      </button>
+
+      <div class="movie-grid" v-if="director.showMovies">
+        <div v-for="movie in director.movies" :key="movie.id" class="movie-card" @click="loadMovie(movie.id)">
+          <p>{{ movie.title }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie details -->
+    <div class="details" v-if="selected">
+      <h2>{{ selected.title }}</h2>
+      <p><strong>Director:</strong> {{ selected.director.name }}</p>
+      <p>{{ selected.short_description }}</p>
+    </div>
+  </div>
+
+  <!-- Vue + main.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

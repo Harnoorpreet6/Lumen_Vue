@@ -1,0 +1,19 @@
+{
+  "name": "vue-movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "sass": "sass style.scss style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.86.3",
+    "vite": "^6.3.2",
+    "vue-movies": "file:"
+  }
+}
